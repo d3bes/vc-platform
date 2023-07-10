@@ -121,7 +121,7 @@ namespace VirtoCommerce.Platform.Web
 
             services.AddDbContext<PlatformDbContext>((provider, options) =>
             {
-                var databaseProvider = Configuration.GetValue("DatabaseProvider", "SqlServer");
+                var databaseProvider = Configuration.GetValue("DatabaseProvider", "PostgreSql");
                 var connectionString = Configuration.GetConnectionString("VirtoCommerce");
 
                 switch (databaseProvider)
